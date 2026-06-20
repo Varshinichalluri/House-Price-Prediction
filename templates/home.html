@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>House Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <h1>House Price Prediction</h1>
+
+    <form action="/predict" method="post">
+
+        <label>CRIM</label>
+        <input type="text" name="crim" required>
+
+        <label>ZN</label>
+        <input type="text" name="zn" required>
+
+        <label>INDUS</label>
+        <input type="text" name="indus" required>
+
+        <label>CHAS</label>
+        <input type="text" name="chas" required>
+
+        <label>NOX</label>
+        <input type="text" name="nox" required>
+
+        <label>RM</label>
+        <input type="text" name="rm" required>
+
+        <label>AGE</label>
+        <input type="text" name="age" required>
+
+        <label>DIS</label>
+        <input type="text" name="dis" required>
+
+        <label>RAD</label>
+        <input type="text" name="rad" required>
+
+        <label>TAX</label>
+        <input type="text" name="tax" required>
+
+        <label>PTRATIO</label>
+        <input type="text" name="ptratio" required>
+
+        <label>B</label>
+        <input type="text" name="b" required>
+
+        <label>LSTAT</label>
+        <input type="text" name="lstat" required>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Price
+        </button>
+
+        <h2>{{ prediction_text }}</h2>
+
+    </form>
+
+</body>
+
+</html>
